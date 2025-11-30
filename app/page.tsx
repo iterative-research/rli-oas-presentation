@@ -174,20 +174,20 @@ const slides = [
               <h3 className="text-xl font-semibold">Kick-Off Meeting</h3>
             </div>
             <p className="text-primary-foreground/90 mb-4">
-              We start with a focused session to align on goals, meet key
-              stakeholders, and establish communication rhythms.
+              We start with a focused session to align on goals, introduce and
+              engage key team members, and establish communication rhythms.
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>Introduce the team and project structure</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>Review existing system usage and pain points</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>Agree on priorities for first iteration</span>
               </li>
             </ul>
@@ -545,8 +545,8 @@ const slides = [
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
                 <p>
-                  Align stakeholders, introduce the team, review current system,
-                  and establish communication rhythms for the project.
+                  Align parties, introduce the team, review current system, and
+                  establish communication rhythms for the project.
                 </p>
               </TooltipContent>
             </Tooltip>
@@ -572,15 +572,15 @@ const slides = [
                 <div className="bg-card border rounded-xl p-4 text-center cursor-help">
                   <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
                   <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Mar–Jun 2026
+                    Feb-Mar 2026
                   </div>
                   <div className="font-semibold mt-1">Build & Iterate</div>
                 </div>
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
                 <p>
-                  Develop core features in 2-week sprints with regular demos,
-                  gather feedback, and refine based on staff input.
+                  Develop core features in sprints with regular demos, gather
+                  feedback, and refine based on staff input.
                 </p>
               </TooltipContent>
             </Tooltip>
@@ -589,15 +589,15 @@ const slides = [
                 <div className="bg-card border rounded-xl p-4 text-center cursor-help">
                   <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
                   <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Jul–Aug 2026
+                    Jun–Aug 2026
                   </div>
                   <div className="font-semibold mt-1">Polish & Deploy</div>
                 </div>
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
                 <p>
-                  Complete UAT, verify WCAG compliance, conduct staff training,
-                  and prepare for production deployment.
+                  Complete UAT, verify WCAG compliance, document and polish, and
+                  align for production deployment.
                 </p>
               </TooltipContent>
             </Tooltip>
@@ -613,8 +613,8 @@ const slides = [
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
                 <p>
-                  Hand off to your team with comprehensive documentation, provide
-                  ongoing support, and ensure smooth operation.
+                  Hand off to your team with comprehensive documentation,
+                  provide ongoing support, and ensure smooth operation.
                 </p>
               </TooltipContent>
             </Tooltip>
@@ -625,20 +625,20 @@ const slides = [
             <h3 className="font-semibold mb-3">Kick-Off & Foundation</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Kick-off meeting with key stakeholders
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                Kick-off meeting with key team members
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 Review existing OAS usage and workflows
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 Establish technical foundation and integrations
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                First iteration planning (MTE vs PSE priorities)
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                First iteration planning (program priorities)
               </li>
             </ul>
           </div>
@@ -646,19 +646,19 @@ const slides = [
             <h3 className="font-semibold mb-3">Build & Iterate Cycles</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 2-week sprints with working demos
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 Regular feedback sessions with staff
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 KETO/OMSA integration development
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 UAT, WCAG verification, staff training
               </li>
             </ul>
