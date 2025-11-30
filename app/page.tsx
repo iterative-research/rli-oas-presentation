@@ -101,17 +101,17 @@ const slides = [
           </p>
           <div className="grid gap-4">
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <FileSearch className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <FileSearch className="h-6 w-6 text-primary shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Review & Validate</h3>
                 <p className="text-sm text-muted-foreground">
                   Confirm which features current staff actively use and value
-                  across MTE, PSE, and other programs, identify pain points
+                  across MTE, PSE, and any other programs, identify pain points
                 </p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <Lightbulb className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <Lightbulb className="h-6 w-6 text-primary shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Reimagine & Improve</h3>
                 <p className="text-sm text-muted-foreground">
@@ -121,7 +121,7 @@ const slides = [
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <FileText className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <FileText className="h-6 w-6 text-primary shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Build & Iterate</h3>
                 <p className="text-sm text-muted-foreground">
@@ -203,15 +203,15 @@ const slides = [
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Walkthrough of existing OAS workflows</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Identify MTE vs PSE differences</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Document financial estimation rules</span>
               </li>
             </ul>
@@ -335,19 +335,19 @@ const slides = [
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Enable/disable programs by schedule</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Modify eligibility parameters</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Update financial allocation rules</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Customize application questionnaires</span>
               </li>
             </ul>
@@ -378,7 +378,7 @@ const slides = [
           </p>
           <div className="space-y-4">
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <Layers className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -389,7 +389,7 @@ const slides = [
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <RefreshCw className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -400,7 +400,7 @@ const slides = [
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
-              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <Shield className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -676,6 +676,7 @@ const slides = [
       </div>
     ),
   },
+
   {
     id: 8,
     title: "Let's Get Started",
@@ -694,25 +695,25 @@ const slides = [
             </div>
             <h3 className="font-semibold mb-1">Award Contract</h3>
             <p className="text-sm text-muted-foreground">
-              Finalize agreement and project kickoff date
+              Finalize agreement and confirm start date
             </p>
           </div>
           <div className="bg-card border rounded-xl p-5 text-center">
             <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3 text-xl font-bold">
               2
             </div>
-            <h3 className="font-semibold mb-1">Schedule Workshops</h3>
+            <h3 className="font-semibold mb-1">Kick-Off Meeting</h3>
             <p className="text-sm text-muted-foreground">
-              Plan staff sessions for MTE, PSE, and admin teams
+              Align on goals, meet the team, review current system
             </p>
           </div>
           <div className="bg-card border rounded-xl p-5 text-center">
             <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3 text-xl font-bold">
               3
             </div>
-            <h3 className="font-semibold mb-1">Begin Discovery</h3>
+            <h3 className="font-semibold mb-1">Start Building</h3>
             <p className="text-sm text-muted-foreground">
-              Start capturing requirements in December 2025
+              First iteration begins with regular demo check-ins
             </p>
           </div>
         </div>
