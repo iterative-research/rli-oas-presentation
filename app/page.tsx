@@ -10,6 +10,8 @@ import {
   FileSearch,
   Lightbulb,
   FileText,
+  MessageSquare,
+  PlayCircle,
   Shield,
   Calendar,
   ArrowRight,
@@ -19,8 +21,15 @@ import {
   GitBranch,
   Database,
   Layers,
+  Repeat,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const slides = [
   {
@@ -88,7 +97,7 @@ const slides = [
             The existing OAS contains a decade of institutional
             knowledge—complex eligibility rules, financial estimation logic, and
             workflows refined through thousands of applications. Our approach
-            ensures nothing valuable is lost.
+            ensures nothing valuable is lost, while adapting to current needs.
           </p>
           <div className="grid gap-4">
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
@@ -96,8 +105,8 @@ const slides = [
               <div>
                 <h3 className="font-semibold">Review & Validate</h3>
                 <p className="text-sm text-muted-foreground">
-                  Confirm which features staff actively use and value across
-                  MTE, PSE, and other programs
+                  Confirm which features current staff actively use and value
+                  across MTE, PSE, and other programs, identify pain points
                 </p>
               </div>
             </div>
@@ -106,7 +115,7 @@ const slides = [
               <div>
                 <h3 className="font-semibold">Reimagine & Improve</h3>
                 <p className="text-sm text-muted-foreground">
-                  Redesign pain points to match Alberta Student Aid's modern
+                  Redesign pain points inspired by Alberta Student Aid's modern
                   experience
                 </p>
               </div>
@@ -114,10 +123,10 @@ const slides = [
             <div className="flex gap-4 p-4 bg-card border rounded-lg">
               <FileText className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold">Formal Sign-Off</h3>
+                <h3 className="font-semibold">Build & Iterate</h3>
                 <p className="text-sm text-muted-foreground">
-                  Clear specifications approved before development begins—no
-                  surprises
+                  Develop in cycles with regular demos and feedback—see progress
+                  early and often, ensure alignment and collaboration
                 </p>
               </div>
             </div>
@@ -144,7 +153,7 @@ const slides = [
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-              <span>Formal requirements document for sign-off</span>
+              <span>Working software delivered incrementally</span>
             </li>
           </ul>
         </div>
@@ -153,68 +162,117 @@ const slides = [
   },
   {
     id: 3,
-    title: "Iterated Review Process",
-    subtitle: "How We Capture Requirements Together",
+    title: "Build & Iterate",
+    subtitle: "How We Work Together",
     content: (
       <div className="space-y-8">
-        <div className="grid md:grid-cols-4 gap-4">
-          <div className="relative">
-            <div className="bg-primary text-primary-foreground rounded-xl p-5 h-full">
-              <div className="text-3xl font-bold mb-2">01</div>
-              <h3 className="font-semibold mb-2">Staff Workshops</h3>
-              <p className="text-sm text-primary-foreground/80">
-                Sessions with advisors, administrators, and management
-              </p>
+        {/* Kick-off and initial review */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-primary text-primary-foreground rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <PlayCircle className="h-8 w-8" />
+              <h3 className="text-xl font-semibold">Kick-Off Meeting</h3>
             </div>
-            <ArrowRight className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground z-10" />
-          </div>
-          <div className="relative">
-            <div className="bg-card border rounded-xl p-5 h-full">
-              <div className="text-3xl font-bold text-primary mb-2">02</div>
-              <h3 className="font-semibold mb-2">Draft & Review</h3>
-              <p className="text-sm text-muted-foreground">
-                We document, you review and provide feedback
-              </p>
-            </div>
-            <ArrowRight className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground z-10" />
-          </div>
-          <div className="relative">
-            <div className="bg-card border rounded-xl p-5 h-full">
-              <div className="text-3xl font-bold text-primary mb-2">03</div>
-              <h3 className="font-semibold mb-2">Refine & Iterate</h3>
-              <p className="text-sm text-muted-foreground">
-                Incorporate feedback, repeat until complete
-              </p>
-            </div>
-            <ArrowRight className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground z-10" />
-          </div>
-          <div className="bg-card border rounded-xl p-5 h-full">
-            <div className="text-3xl font-bold text-primary mb-2">04</div>
-            <h3 className="font-semibold mb-2">Formal Sign-Off</h3>
-            <p className="text-sm text-muted-foreground">
-              Approved specification before any code is written
+            <p className="text-primary-foreground/90 mb-4">
+              We start with a focused session to align on goals, meet key
+              stakeholders, and establish communication rhythms.
             </p>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Introduce the team and project structure</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Review existing system usage and pain points</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Agree on priorities for first iteration</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-card border rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <FileSearch className="h-8 w-8 text-primary" />
+              <h3 className="text-xl font-semibold">Usage Review</h3>
+            </div>
+            <p className="text-muted-foreground mb-4">
+              Before building, we study how staff actually use the current
+              system to ensure we preserve what works.
+            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Walkthrough of existing OAS workflows</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Identify MTE vs PSE differences</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Document financial estimation rules</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
-          <img
-            src="/collaborative-workshop-with-sticky-notes-on-whiteb.jpg"
-            alt="Requirements workshop session"
-            className="rounded-xl shadow-lg border w-full object-cover h-48"
-          />
-          <img
-            src="/user-journey-map-flowchart-with-connected-steps-an.jpg"
-            alt="User journey mapping"
-            className="rounded-xl shadow-lg border w-full object-cover h-48"
-          />
+
+        {/* The iterative loop */}
+        <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20">
+          <h3 className="text-lg font-semibold mb-4 text-center">
+            The Build & Iterate Loop
+          </h3>
+          <div className="grid md:grid-cols-4 gap-4">
+            <div className="text-center relative">
+              <div className="h-16 w-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3">
+                <Code2 className="h-7 w-7" />
+              </div>
+              <h4 className="font-semibold">Build</h4>
+              <p className="text-sm text-muted-foreground">
+                We develop a working feature or module
+              </p>
+              <ArrowRight className="hidden md:block absolute -right-2 top-8 h-5 w-5 text-muted-foreground" />
+            </div>
+            <div className="text-center relative">
+              <div className="h-16 w-16 rounded-full bg-card border-2 border-primary flex items-center justify-center mx-auto mb-3">
+                <Users className="h-7 w-7 text-primary" />
+              </div>
+              <h4 className="font-semibold">Demo</h4>
+              <p className="text-sm text-muted-foreground">
+                Show you working software, not just documents
+              </p>
+              <ArrowRight className="hidden md:block absolute -right-2 top-8 h-5 w-5 text-muted-foreground" />
+            </div>
+            <div className="text-center relative">
+              <div className="h-16 w-16 rounded-full bg-card border-2 border-primary flex items-center justify-center mx-auto mb-3">
+                <MessageSquare className="h-7 w-7 text-primary" />
+              </div>
+              <h4 className="font-semibold">Feedback</h4>
+              <p className="text-sm text-muted-foreground">
+                You tell us what works and what needs adjustment
+              </p>
+              <ArrowRight className="hidden md:block absolute -right-2 top-8 h-5 w-5 text-muted-foreground" />
+            </div>
+            <div className="text-center">
+              <div className="h-16 w-16 rounded-full bg-card border-2 border-primary flex items-center justify-center mx-auto mb-3">
+                <Repeat className="h-7 w-7 text-primary" />
+              </div>
+              <h4 className="font-semibold">Refine</h4>
+              <p className="text-sm text-muted-foreground">
+                We incorporate feedback and repeat
+              </p>
+            </div>
+          </div>
         </div>
+
         <div className="bg-card border rounded-xl p-5">
           <p className="text-center text-muted-foreground">
             <span className="font-medium text-foreground">
-              No development begins until requirements are formally approved.
+              You see the working product early and often.
             </span>{" "}
-            This protects both parties from scope creep and ensures alignment on
-            deliverables.
+            This approach reduces risk, allows course corrections, and ensures
+            the final product meets your needs.
           </p>
         </div>
       </div>
@@ -473,86 +531,147 @@ const slides = [
     subtitle: "December 2025 – September 2026",
     content: (
       <div className="space-y-6">
-        <div className="grid md:grid-cols-5 gap-3">
-          <div className="bg-primary text-primary-foreground rounded-xl p-4 text-center">
-            <Calendar className="h-6 w-6 mx-auto mb-2" />
-            <div className="text-xs uppercase tracking-wide opacity-80">
-              Dec 2025
-            </div>
-            <div className="font-semibold mt-1">Discovery</div>
+        <TooltipProvider>
+          <div className="grid md:grid-cols-5 gap-3">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-primary text-primary-foreground rounded-xl p-4 text-center cursor-help">
+                  <Calendar className="h-6 w-6 mx-auto mb-2" />
+                  <div className="text-xs uppercase tracking-wide opacity-80">
+                    Dec 2025
+                  </div>
+                  <div className="font-semibold mt-1">Kick-Off</div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <p>
+                  Align stakeholders, introduce the team, review current system,
+                  and establish communication rhythms for the project.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
+                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                    Jan–Feb 2026
+                  </div>
+                  <div className="font-semibold mt-1">Foundation</div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <p>
+                  Set up technical infrastructure, establish integrations with
+                  KETO/OMSA, and document existing workflows and business rules.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
+                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                    Mar–Jun 2026
+                  </div>
+                  <div className="font-semibold mt-1">Build & Iterate</div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <p>
+                  Develop core features in 2-week sprints with regular demos,
+                  gather feedback, and refine based on staff input.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
+                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                    Jul–Aug 2026
+                  </div>
+                  <div className="font-semibold mt-1">Polish & Deploy</div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <p>
+                  Complete UAT, verify WCAG compliance, conduct staff training,
+                  and prepare for production deployment.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
+                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                    2026 <ArrowRight className="h-4 w-4 inline-block" />
+                  </div>
+                  <div className="font-semibold mt-1">Transition & Support</div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <p>
+                  Hand off to your team with comprehensive documentation, provide
+                  ongoing support, and ensure smooth operation.
+                </p>
+              </TooltipContent>
+            </Tooltip>
           </div>
-          <div className="bg-card border rounded-xl p-4 text-center">
-            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-            <div className="text-xs uppercase tracking-wide text-muted-foreground">
-              Jan–Mar 2026
-            </div>
-            <div className="font-semibold mt-1">Design</div>
-          </div>
-          <div className="bg-card border rounded-xl p-4 text-center">
-            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-            <div className="text-xs uppercase tracking-wide text-muted-foreground">
-              Feb–Jun 2026
-            </div>
-            <div className="font-semibold mt-1">Development</div>
-          </div>
-          <div className="bg-card border rounded-xl p-4 text-center">
-            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-            <div className="text-xs uppercase tracking-wide text-muted-foreground">
-              Jun–Jul 2026
-            </div>
-            <div className="font-semibold mt-1">Testing</div>
-          </div>
-          <div className="bg-card border rounded-xl p-4 text-center">
-            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-            <div className="text-xs uppercase tracking-wide text-muted-foreground">
-              Jul–Sep 2026
-            </div>
-            <div className="font-semibold mt-1">Launch</div>
-          </div>
-        </div>
+        </TooltipProvider>
         <div className="grid md:grid-cols-2 gap-6 mt-6">
           <div className="bg-card border rounded-xl p-5">
-            <h3 className="font-semibold mb-3">Discovery & Design Phase</h3>
+            <h3 className="font-semibold mb-3">Kick-Off & Foundation</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Staff workshops for MTE, PSE, and other programs
+                Kick-off meeting with key stakeholders
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Feature audit with formal sign-off
+                Review existing OAS usage and workflows
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                UX/UI prototypes matching Alberta Student Aid
+                Establish technical foundation and integrations
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Technical architecture and integration specs
+                First iteration planning (MTE vs PSE priorities)
               </li>
             </ul>
           </div>
           <div className="bg-card border rounded-xl p-5">
-            <h3 className="font-semibold mb-3">Build & Launch Phase</h3>
+            <h3 className="font-semibold mb-3">Build & Iterate Cycles</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Frontend build with modern React stack
+                2-week sprints with working demos
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                API development with KETO/OMSA integration
+                Regular feedback sessions with staff
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                UAT, WCAG verification, security audit
+                KETO/OMSA integration development
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                Staff training and post-launch support
+                UAT, WCAG verification, staff training
               </li>
             </ul>
           </div>
+        </div>
+        <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-5 border border-primary/20">
+          <p className="text-center text-muted-foreground">
+            <span className="font-medium text-foreground">
+              Flexibility built in:
+            </span>{" "}
+            The iterative approach allows us to adjust priorities as we learn
+            more about your needs throughout the project.
+          </p>
         </div>
       </div>
     ),
