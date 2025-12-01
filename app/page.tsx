@@ -221,7 +221,7 @@ const slides = [
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>Agree on priorities for first iteration</span>
+                <span>Agree on approach and priorities</span>
               </li>
             </ul>
           </div>
@@ -231,8 +231,8 @@ const slides = [
               <h3 className="text-xl font-semibold">Usage Review</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Before building, we study how staff actually use the current
-              system to ensure we preserve what works.
+              Before building, we want to study how staff actually use the
+              current system to ensure we preserve what works.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
