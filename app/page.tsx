@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const basePath =
   process.env.NODE_ENV === "production" ? "/rli-oas-presentation" : "";
@@ -771,6 +771,20 @@ export default function PresentationPage() {
     setCurrentSlide(index);
     scrollToTop();
   };
+
+  // Add keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        goToPrevious();
+      } else if (event.key === "ArrowRight") {
+        goToNext();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentSlide]);
 
   return (
     <div className="h-screen bg-background flex flex-col overflow-hidden">
