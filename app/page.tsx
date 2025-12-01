@@ -741,11 +741,26 @@ const slides = [
             </p>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-xl p-6 border border-primary/20">
+        <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-xl p-6 border border-primary/20 ">
           <p className="font-medium text-lg">
             Questions? We're happy to discuss any aspect of this proposal in
             detail.
           </p>
+        </div>
+        <div className="group relative h-64">
+          <div className="flex items-center justify-center gap-8 mt-6 pt-6 border-t opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="rounded-lg p-4">
+              <img
+                src="https://www.rupertsland.org/wp-content/themes/rli/images/logo.svg?r=1"
+                alt="Rupertsland Institute"
+                className="h-12 brightness-0 dark:brightness-100"
+              />
+            </div>
+            <div className="text-2xl font-light text-muted-foreground">×</div>
+            <div>
+              <img src="/iterative-logo.png" alt="Iterative" className="h-12" />
+            </div>
+          </div>
         </div>
       </div>
     ),
