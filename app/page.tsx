@@ -344,8 +344,8 @@ const slides = [
             <div className="border-l-4 border-primary pl-4 py-2 bg-card rounded-r-lg">
               <h3 className="font-semibold">Distinct Financial Estimation</h3>
               <p className="text-sm text-muted-foreground">
-                Tuition, living allowances, books—calculated differently per
-                program type
+                Tuition, living allowances, bridge programs—calculated
+                differently per program
               </p>
             </div>
             <div className="border-l-4 border-primary pl-4 py-2 bg-card rounded-r-lg">
