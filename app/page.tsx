@@ -314,7 +314,7 @@ const slides = [
   {
     id: 4,
     title: "Multi-Program Complexity",
-    subtitle: "Future-proof Program-specificRequirements",
+    subtitle: "Future-proof Program-specific Requirements",
     content: (
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
