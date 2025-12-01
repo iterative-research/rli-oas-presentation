@@ -817,8 +817,8 @@ export default function PresentationPage() {
       </header>
 
       {/* Slide Content */}
-      <main className="flex-1 p-6 md:p-12 overflow-auto">
-        <div className="max-w-6xl mx-auto">
+      <main className="flex-1 p-6 md:p-12 overflow-auto flex items-center">
+        <div className="max-w-6xl mx-auto w-full">
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">
               {slides[currentSlide].title}
