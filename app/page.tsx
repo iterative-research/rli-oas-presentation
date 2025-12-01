@@ -562,7 +562,7 @@ const slides = [
   {
     id: 7,
     title: "Proposed Timeline",
-    subtitle: "December 2025 – September 2026",
+    subtitle: "December 2025 – August 2026",
     content: (
       <div className="space-y-6">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
