@@ -22,6 +22,7 @@ import {
   Database,
   Layers,
   Repeat,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +31,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const slides = [
   {
@@ -74,14 +76,27 @@ const slides = [
           </div>
         </div>
         <div className="relative">
-          <img
-            src="/modern-dashboard-interface-with-student-applicatio.jpg"
-            alt="Modern application dashboard concept"
-            className="rounded-xl shadow-2xl border"
-          />
-          <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
-            Target: September 2026
-          </div>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="cursor-pointer transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl">
+                <img
+                  src="/mockup-macbook-top.png"
+                  alt="Modern application dashboard concept"
+                  className="rounded-xl shadow-2xl border p-6"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
+                  Initial concept work, <em>not a final design</em>
+                </div>
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 overflow-auto">
+              <img
+                src="/mockup-full.png"
+                alt="Full mockup"
+                className="w-full h-auto"
+              />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     ),
