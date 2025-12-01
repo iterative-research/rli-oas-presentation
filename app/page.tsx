@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+
+const basePath =
+  process.env.NODE_ENV === "production" ? "/rli-oas-presentation" : "";
 import {
   ChevronLeft,
   ChevronRight,
@@ -82,13 +85,13 @@ const slides = [
                 <div className="relative preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
                   {/* Front - MacBook */}
                   <img
-                    src="/mockup-macbook-top.png"
+                    src={`${basePath}/mockup-macbook-top.png`}
                     alt="Modern application dashboard concept"
                     className="rounded-xl shadow-2xl border p-6 w-full backface-hidden"
                   />
                   {/* Back - iPhone */}
                   <img
-                    src="/mockup-iphone-top.png"
+                    src={`${basePath}/mockup-iphone-top.png`}
                     alt="Mobile view concept"
                     className="rounded-xl shadow-2xl border p-6 w-full h-full absolute inset-0 backface-hidden rotate-y-180 object-top object-scale-down"
                   />
@@ -100,7 +103,7 @@ const slides = [
             </DialogTrigger>
             <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 overflow-auto">
               <img
-                src="/mockup-full.png"
+                src={`${basePath}/mockup-full.png`}
                 alt="Full mockup"
                 className="w-full h-auto"
               />
@@ -760,7 +763,11 @@ const slides = [
             </div>
             <div className="text-2xl font-light text-muted-foreground">×</div>
             <div>
-              <img src="/iterative-logo.png" alt="Iterative" className="h-12" />
+              <img
+                src={`${basePath}/iterative-logo.png`}
+                alt="Iterative"
+                className="h-12"
+              />
             </div>
           </div>
         </div>
