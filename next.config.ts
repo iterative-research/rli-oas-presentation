@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === "production" ? "/oas-demo" : "",
+  basePath:
+    process.env.NODE_ENV === "production" ? "/rli-oas-presentation" : "",
 };
 
 export default nextConfig;
