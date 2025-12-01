@@ -779,22 +779,35 @@ const slides = [
 export default function PresentationPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const scrollToTop = () => {
+    // Use setTimeout to ensure DOM has updated after state change
+    setTimeout(() => {
+      const mainElement = document.querySelector("main");
+      if (mainElement) {
+        mainElement.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 0);
+  };
+
   const goToPrevious = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    scrollToTop();
   };
 
   const goToNext = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    scrollToTop();
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+    scrollToTop();
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="h-screen bg-background flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="border-b px-6 py-4 flex items-center justify-between bg-card sash-border-top pt-6">
+      <header className="border-b px-6 py-4 flex items-center justify-between bg-card sash-border-top pt-6 shrink-0 md:mb-4">
         <div className="text-sm text-muted-foreground">
           Slide {currentSlide + 1} of {slides.length}
         </div>
@@ -817,22 +830,22 @@ export default function PresentationPage() {
       </header>
 
       {/* Slide Content */}
-      <main className="flex-1 p-6 md:p-12 overflow-auto flex items-center">
+      <main className="flex-1 p-6 md:p-12 overflow-auto flex md:items-center">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="mb-8">
+          <div className="mb-4 md:mb-8">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">
               {slides[currentSlide].title}
             </h1>
-            <p className="text-xl text-muted-foreground mt-2">
+            <p className="md:text-xl text-muted-foreground mt-2">
               {slides[currentSlide].subtitle}
             </p>
           </div>
-          <div className="mt-8">{slides[currentSlide].content}</div>
+          <div className="md:my-8">{slides[currentSlide].content}</div>
         </div>
       </main>
 
       {/* Navigation */}
-      <footer className="border-t px-6 py-4 flex items-center justify-between bg-card sash-border-bottom pb-5">
+      <footer className="border-t px-6 py-4 flex items-center justify-between bg-card sash-border-bottom pb-5 shrink-0 mt-4">
         <Button
           variant="outline"
           onClick={goToPrevious}
