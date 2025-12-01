@@ -78,12 +78,21 @@ const slides = [
         <div className="relative">
           <Dialog>
             <DialogTrigger asChild>
-              <button className="cursor-pointer transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl">
-                <img
-                  src="/mockup-macbook-top.png"
-                  alt="Modern application dashboard concept"
-                  className="rounded-xl shadow-2xl border p-6"
-                />
+              <button className="group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl block w-full perspective-1000">
+                <div className="relative preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front - MacBook */}
+                  <img
+                    src="/mockup-macbook-top.png"
+                    alt="Modern application dashboard concept"
+                    className="rounded-xl shadow-2xl border p-6 w-full backface-hidden"
+                  />
+                  {/* Back - iPhone */}
+                  <img
+                    src="/mockup-iphone-top.png"
+                    alt="Mobile view concept"
+                    className="rounded-xl shadow-2xl border p-6 w-full h-full absolute inset-0 backface-hidden rotate-y-180 object-top object-scale-down"
+                  />
+                </div>
                 <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
                   Initial concept work, <em>not a final design</em>
                 </div>
