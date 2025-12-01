@@ -690,7 +690,7 @@ const slides = [
             <div className="h-12 w-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-xl font-bold">
               1
             </div>
-            <h3 className="font-semibold mb-1">Award Contract</h3>
+            <h3 className="font-semibold mb-1">Contracting</h3>
             <p className="text-sm text-muted-foreground">
               Finalize agreement and confirm start date
             </p>
