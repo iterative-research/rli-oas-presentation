@@ -587,7 +587,7 @@ const slides = [
             </div>
             <div className="font-semibold mt-1">Build & Iterate</div>
             <p className="text-xs mt-2 text-muted-foreground hidden md:block">
-              Develop features in sprints with regular demos
+              Develop features in sprints with regular demos and feedback
             </p>
           </div>
           <div className="bg-card border rounded-xl p-4 text-center">
@@ -597,7 +597,7 @@ const slides = [
             </div>
             <div className="font-semibold mt-1">Polish & Deploy</div>
             <p className="text-xs mt-2 text-muted-foreground hidden md:block">
-              UAT, WCAG compliance, training and deployment
+              Document and polish, user testing, training and deployment
             </p>
           </div>
           <div className="bg-card border rounded-xl p-4 text-center">
@@ -607,7 +607,7 @@ const slides = [
             </div>
             <div className="font-semibold mt-1">Transition & Support</div>
             <p className="text-xs mt-2 text-muted-foreground hidden md:block">
-              Handoff with documentation and ongoing support
+              Handoff with documentation and ongoing technical assistance
             </p>
           </div>
         </div>
