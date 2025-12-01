@@ -559,96 +559,58 @@ const slides = [
     subtitle: "December 2025 – September 2026",
     content: (
       <div className="space-y-6">
-        <TooltipProvider>
-          <div className="grid md:grid-cols-5 gap-3">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="bg-primary text-primary-foreground rounded-xl p-4 text-center cursor-help">
-                  <Calendar className="h-6 w-6 mx-auto mb-2" />
-                  <div className="text-xs uppercase tracking-wide opacity-80">
-                    Dec 2025
-                  </div>
-                  <div className="font-semibold mt-1">Kick-Off</div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="max-w-xs">
-                <p>
-                  Align parties, introduce the team, review current system, and
-                  establish communication rhythms for the project.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Jan–Feb 2026
-                  </div>
-                  <div className="font-semibold mt-1">Foundation</div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="max-w-xs">
-                <p>
-                  Set up technical infrastructure, establish integrations with
-                  KETO/OMSA, and document existing workflows and business rules.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Feb-Jun 2026
-                  </div>
-                  <div className="font-semibold mt-1">Build & Iterate</div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="max-w-xs">
-                <p>
-                  Develop core features in sprints with regular demos, gather
-                  feedback, and refine based on staff input.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Jun–Aug 2026
-                  </div>
-                  <div className="font-semibold mt-1">Polish & Deploy</div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="max-w-xs">
-                <p>
-                  Complete UAT, verify WCAG compliance, document and polish, and
-                  align for production deployment. Training and integration with
-                  your team.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="bg-card border rounded-xl p-4 text-center cursor-help">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    2026 <ArrowRight className="h-4 w-4 inline-block" />
-                  </div>
-                  <div className="font-semibold mt-1">Transition & Support</div>
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="max-w-xs">
-                <p>
-                  Hand off to your team with comprehensive documentation,
-                  provide ongoing support, and ensure smooth operation.
-                </p>
-              </TooltipContent>
-            </Tooltip>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="bg-primary text-primary-foreground rounded-xl p-4 text-center">
+            <Calendar className="h-6 w-6 mx-auto mb-2" />
+            <div className="text-xs uppercase tracking-wide opacity-80">
+              Dec 2025
+            </div>
+            <div className="font-semibold mt-1">Kick-Off</div>
+            <p className="text-xs mt-2 opacity-90 hidden md:block">
+              Align parties, introduce the team, review current system
+            </p>
           </div>
-        </TooltipProvider>
+          <div className="bg-card border rounded-xl p-4 text-center">
+            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+            <div className="text-xs uppercase tracking-wide text-muted-foreground">
+              Jan–Feb 2026
+            </div>
+            <div className="font-semibold mt-1">Foundation</div>
+            <p className="text-xs mt-2 text-muted-foreground hidden md:block">
+              Set up infrastructure, integrations, document workflows
+            </p>
+          </div>
+          <div className="bg-card border rounded-xl p-4 text-center">
+            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+            <div className="text-xs uppercase tracking-wide text-muted-foreground">
+              Feb-Jun 2026
+            </div>
+            <div className="font-semibold mt-1">Build & Iterate</div>
+            <p className="text-xs mt-2 text-muted-foreground hidden md:block">
+              Develop features in sprints with regular demos
+            </p>
+          </div>
+          <div className="bg-card border rounded-xl p-4 text-center">
+            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+            <div className="text-xs uppercase tracking-wide text-muted-foreground">
+              Jun–Aug 2026
+            </div>
+            <div className="font-semibold mt-1">Polish & Deploy</div>
+            <p className="text-xs mt-2 text-muted-foreground hidden md:block">
+              UAT, WCAG compliance, training and deployment
+            </p>
+          </div>
+          <div className="bg-card border rounded-xl p-4 text-center">
+            <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
+            <div className="text-xs uppercase tracking-wide text-muted-foreground">
+              2026 <ArrowRight className="h-4 w-4 inline-block" />
+            </div>
+            <div className="font-semibold mt-1">Transition & Support</div>
+            <p className="text-xs mt-2 text-muted-foreground hidden md:block">
+              Handoff with documentation and ongoing support
+            </p>
+          </div>
+        </div>
         <div className="grid md:grid-cols-2 gap-6 mt-6">
           <div className="bg-card border rounded-xl p-5">
             <h3 className="font-semibold mb-3">Kick-Off & Foundation</h3>
