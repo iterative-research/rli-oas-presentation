@@ -245,7 +245,7 @@ const slides = [
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                <span>Document financial estimation rules</span>
+                <span>Document workflows for different roles</span>
               </li>
             </ul>
           </div>
