@@ -787,7 +787,7 @@ export default function PresentationPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="border-b px-6 py-4 flex items-center justify-between bg-card sash-border-top">
+      <header className="border-b px-6 py-4 flex items-center justify-between bg-card sash-border-top pt-6">
         <div className="text-sm text-muted-foreground">
           Slide {currentSlide + 1} of {slides.length}
         </div>
@@ -825,7 +825,7 @@ export default function PresentationPage() {
       </main>
 
       {/* Navigation */}
-      <footer className="border-t px-6 py-4 flex items-center justify-between bg-card sash-border-bottom">
+      <footer className="border-t px-6 py-4 flex items-center justify-between bg-card sash-border-bottom pb-5">
         <Button
           variant="outline"
           onClick={goToPrevious}
