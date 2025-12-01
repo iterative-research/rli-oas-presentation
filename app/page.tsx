@@ -500,8 +500,8 @@ const slides = [
             <div className="border rounded-lg p-4 bg-card">
               <h4 className="font-medium">KETO Synchronization</h4>
               <p className="text-sm text-muted-foreground">
-                Bi-directional sync of tombstone and application data with
-                conflict resolution and audit logging
+                Bi-directional sync of tombstone and application data with audit
+                logging
               </p>
             </div>
             <div className="border rounded-lg p-4 bg-card">
@@ -529,8 +529,8 @@ const slides = [
             <div className="border rounded-lg p-4 bg-card">
               <h4 className="font-medium">Clean, Documented Codebase</h4>
               <p className="text-sm text-muted-foreground">
-                Modern React + TypeScript stack with comprehensive documentation
-                for your team
+                Modern React + TypeScript stack with complete documentation for
+                your team
               </p>
             </div>
             <div className="border rounded-lg p-4 bg-card">
