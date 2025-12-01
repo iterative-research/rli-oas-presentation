@@ -379,9 +379,9 @@ const slides = [
           <div className="bg-card border rounded-xl p-5">
             <h4 className="font-medium mb-2">Year-Over-Year Tracking</h4>
             <p className="text-sm text-muted-foreground">
-              Complex allocation rules change annually. The system maintains
-              historical configurations for accurate reporting and forecasting
-              across budget years.
+              Complex allocation and funding rules have changed over time. We
+              can maintain historical configurations for accurate reporting,
+              comparisons and forecasting across budget years.
             </p>
           </div>
         </div>
