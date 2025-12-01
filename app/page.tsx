@@ -115,7 +115,7 @@ const slides = [
     title: "Why Requirements Capture",
     subtitle: "Preserving What Works, Improving What Doesn't",
     content: (
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <p className="text-lg text-muted-foreground leading-relaxed">
             The existing OAS contains a decade of institutional
@@ -305,21 +305,22 @@ const slides = [
   {
     id: 4,
     title: "Multi-Program Complexity",
-    subtitle: "MTE, PSE, and Program-Specific Requirements",
+    subtitle: "Future-proof Program-specificRequirements",
     content: (
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Each funding program has distinct eligibility rules, application
-            funnels, and financial estimation strategies. The rebuild will
-            support this complexity while making it easier to manage.
+            Each funding program (MTE, PSE) has distinct eligibility rules,
+            application funnels, and financial estimation strategies. The
+            rebuild will support this complexity while making it easier to
+            extend to the future.
           </p>
           <div className="space-y-4">
             <div className="border-l-4 border-primary pl-4 py-2 bg-card rounded-r-lg">
               <h3 className="font-semibold">Different Eligibility Rules</h3>
               <p className="text-sm text-muted-foreground">
                 Each program has unique criteria—membership status, academic
-                standing, institution type
+                standing, institution type, reporting requirements.
               </p>
             </div>
             <div className="border-l-4 border-primary pl-4 py-2 bg-card rounded-r-lg">
@@ -341,7 +342,7 @@ const slides = [
             <div className="border-l-4 border-primary pl-4 py-2 bg-card rounded-r-lg">
               <h3 className="font-semibold">Separate Approval Workflows</h3>
               <p className="text-sm text-muted-foreground">
-                Different review steps, disbursement rules, and advisor
+                Configurable review steps, disbursement rules, and advisor
                 assignments
               </p>
             </div>
@@ -596,7 +597,7 @@ const slides = [
                 <div className="bg-card border rounded-xl p-4 text-center cursor-help">
                   <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
                   <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Feb-Mar 2026
+                    Feb-Jun 2026
                   </div>
                   <div className="font-semibold mt-1">Build & Iterate</div>
                 </div>
@@ -621,7 +622,8 @@ const slides = [
               <TooltipContent className="max-w-xs">
                 <p>
                   Complete UAT, verify WCAG compliance, document and polish, and
-                  align for production deployment.
+                  align for production deployment. Training and integration with
+                  your team.
                 </p>
               </TooltipContent>
             </Tooltip>
