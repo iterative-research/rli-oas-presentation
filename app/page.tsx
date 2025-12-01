@@ -34,7 +34,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const slides = [
   {
@@ -102,6 +107,7 @@ const slides = [
               </button>
             </DialogTrigger>
             <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 overflow-auto">
+              <DialogTitle className="sr-only">Full Mockup Preview</DialogTitle>
               <img
                 src={`${basePath}/mockup-full.png`}
                 alt="Full mockup"
